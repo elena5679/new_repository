@@ -1,0 +1,15 @@
+import time
+from selenium import webdriver
+driver = webdriver.Chrome()
+time.sleep(5)
+driver.get("https://practice.automationtesting.in/")
+driver.maximize_window()
+time.sleep(3)
+account = driver.find_element_by_css_selector('#menu-item-50 > a')
+account.click()
+register = driver.find_element_by_css_selector('#reg_email')
+register.send_keys("anna@yandex.ru")
+password = driver.find_element_by_css_selector('#reg_password')
+password.send_keys("657987def567dfv")
+submit = driver.find_element_by_css_selector('p.woocomerce-FormRow.form-row > input.woocommerce-Button.button')
+submit.click()
